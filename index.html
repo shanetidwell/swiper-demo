@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
   <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="../dist/css/swiper.min.css">
-
+  <link rel="stylesheet" href="./dist/css/swiper.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
   <!-- Demo styles -->
   <style>
     html, body {
@@ -28,55 +30,276 @@
     }
     .swiper-slide {
       text-align: center;
-      font-size: 18px;
-      background: #fff;
+      font-size: 15px;
+      background-color: #71DDE3;
       /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
       display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
       justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
       align-items: center;
     }
+    .name-banner{
+        background-color: rgb(56, 137, 230);
+        border-radius: 10px 50px;
+        box-shadow: 0px 3px 8px black;
+        color: white
+    }
+    .like-icon {
+        height: 100px;
+        width: auto
+    }
+    
+    @media (min-width: 960px) {
+    .avatar {
+        height: 70vh;
+        padding-right: 100px;
+    }
+    .bar {
+        height: 30px;
+        background-color: rgb(231, 231, 231);
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.322);
+    }
+    #bar-basketball {
+        width: 90%
+    }
+    #bar-golf {
+        width: 75%
+    }
+    #bar-map {
+        width: 60%
+    }
+    #bar-mountain {
+        width: 70%
+    }
+    .facts {
+        border: 2px solid white;
+        border-width: thick;
+        border-radius: 20px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.322);
+        background-color: white
+    }
+    #family{
+        width:200px;
+    }
+    #sd{
+        width: 32px
+    }
+    .thought{
+        width: 185px;
+        height: 185px;
+    }
+    .truth-icon{
+        width: 45px;
+    }
+    #quote {
+        width: 450px;
+        padding: 2px;
+        background-color: white;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.322);  
+    }
+
+}
+
   </style>
 </head>
 <body>
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-      <div class="swiper-slide">Slide 10</div>
+
+        <!-- intro slide -->
+        <div class="swiper-slide">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-7 justify-content-center align-items-center d-flex flex-column ">
+                        <div class="name-banner p-4">
+                            <h2>Hello there! My name is </h2>
+                            <h1>Shane Tidwell</h1>
+                        </div>
+                        <div class="mt-4">
+                            <h3>And I'm a</h3>                                
+                            <h3>Web Developer</h3>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <img class="avatar" src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=Blonde&facialHairType=Blank&clotheType=Hoodie&clotheColor=Gray02&eyeType=Default&eyebrowType=FlatNatural&mouthType=Smile&skinColor=Light"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- family slide -->
+        <div class="swiper-slide">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 justify-content-center align-items-center d-flex flex-column ">
+                            <div class="name-banner p-4">
+                                <h1>My Family</h1>
+                                <h2>Established 6/14/2016</h2>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-end mt-5">
+                                <img class="img-responsive" id="family"src="./family-group-of-three.png"><img>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+
+
+                            <div class="timeline">
+                                <div class="container-timeline left">
+                                    <div class="content">
+                                        <h5>May 31, 2017</h5>
+                                        <p>London Born</p>
+                                        <img class="img-responsive" src="./baby-carriage.png"><img>
+                                    </div>
+                                </div>
+                                <div class="container-timeline right">
+                                    <div class="content">
+                                        <h5>June 14, 2016</h5>
+                                        <p>Married</p>
+                                        <img src="./marriage.png"><img>                                       
+                                    </div>
+                                </div>
+                                <div class="container-timeline left">
+                                    <div class="content">
+                                        <h5>June 12, 2015</h5>
+                                        <p>First Date</p>
+                                        <img src="./couple.png"><img>
+                                    </div>
+                                </div>
+                                <div class="container-timeline right">
+                                        <div class="content">
+                                            <h5>2015</h5>
+                                            <p>First Met</p>
+                                            <img class="img-responsive" id="sd" src="./southdakota.png"><img>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- what I like slide -->
+        <div class="swiper-slide">
+            <div class="container fluid">
+                <div class="row">
+                    <div class="col-lg-7 justify-content-center align-items-start d-flex flex-column py-4">
+                        <div class="name-banner p-4">
+                            <h1>What I Like</h1>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-11 py-2">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-6 m-0 d-flex justify-content-end">
+                                <img class="like-icon"src="./basketball.png"></img>
+                            </div>
+                            <div class="col-6">
+                                <div class="bar" id="bar-basketball"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-11 py-2">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-6 m-0 d-flex justify-content-end">
+                                    <img class="like-icon"src="./golf.png"></img>
+                                </div>
+                                <div class="col-6">
+                                    <div class="bar" id="bar-golf"></div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-11 py-2">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-6 m-0 d-flex justify-content-end">
+                                    <img class="like-icon"src="./world.png"></img>                                        
+                                </div>
+                                <div class="col-6">
+                                    <div class="bar" id="bar-map"></div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-11 py-2">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-6 m-0 d-flex justify-content-end">
+                                    <img class="like-icon"src="./mountains.png"></img>
+                                </div>
+                                <div class="col-6">
+                                    <div class="bar" id="bar-mountain"></div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+        </div>
+
+
+       <!-- favorite quote slide  -->
+        <div class="swiper-slide">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-6 justify-content-center align-items-center d-flex">
+                        <div class="name-banner p-4">
+                            <h1>Favorite Quote</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 pr-5" >
+                        <img class="rounded" id="quote" src="./quote-monson.jpg"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Two Truths and a lie slide -->
+        <div class="swiper-slide">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-7 justify-content-center align-items-center d-flex">
+                        <div class="name-banner p-4">
+                            <h1>Two Truths and Lie</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5 pr-5">
+                        <div class="facts my-3 thought d-flex flex-column justify-content-end align-items-center rounded-circle p-2">
+                            <P>I once had to go to the doctor because I  got a lego stuck in my nose</P>
+                            <img class="img-responsive truth-icon" src="./lego.png"></img>
+                        </div>
+                        <div class="facts my-3 thought d-flex flex-column justify-content-end align-items-center rounded-circle p-2">
+                            <P>I'm a quick learner and like to try new things</P>
+                            <img class="img-responsive truth-icon" src="./innovation.png"></img>
+                        </div>
+                        <div class="facts my-3 thought d-flex flex-column justify-content-end align-items-center rounded-circle p-2">
+                            <span class="pb-0">I work for the LDS church as a web developer</span>
+                            <p>...a lie for now</p>
+                            <img class="img-responsive truth-icon" src="./programming-code.png"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Add Arrows -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </div>
 
   <!-- Swiper JS -->
-  <script src="../dist/js/swiper.min.js"></script>
+  <script src="./dist/js/swiper.min.js"></script>
 
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper('.swiper-container', {
+      pagination: {
+          el: '.swiper-pagination'
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
     });
   </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </body>
 </html>
